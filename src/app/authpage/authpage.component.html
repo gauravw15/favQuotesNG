@@ -1,0 +1,27 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" ngNativeValidate id="form">
+        <div class="d-flex flex-column">
+            <div class="form-input">
+                <label for="email">Email</label>
+                <input name="email" type="email" [(ngModel)]="email" required />
+            </div>
+            <div *ngIf="authMode !== 'login'" class="form-input">
+                <label for="username">Username</label>
+                <input name="username" type="text" [(ngModel)]="username" required />
+            </div>
+            <div class="form-input">
+                <label for="password">Password</label>
+                <input name="password" type="text" [(ngModel)]="password" required />
+            </div>
+            <div>
+                <button type="submit"> {{ authMode | titlecase }} </button>
+            </div>
+        </div>
+    </form>
+    <button class="mt-2" type="button" (click)='changeAuthMode()'>
+        Switch to {{ authMode === "login" ? "SignUp" : "Login" }}
+    </button>
+    <div class="mt-3" *ngIf="failed">
+        {{ authMode === "login" ? " Email/password is incorrect" : "User already exists" }}
+    </div>
+</div>

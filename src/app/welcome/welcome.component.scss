@@ -1,0 +1,24 @@
+span{
+    width: 15%;
+    margin: 5px 5px;
+    word-wrap: break-word;
+}
+
+.episode{
+    display: block;
+    width: 30%;
+}
+
+.quote{
+    display: block;
+    width: 50%;
+}
+
+@media(max-width:360px){
+    .container{
+        padding: 5px;
+    }
+    span{
+        margin: 1px 5px;
+    }
+}

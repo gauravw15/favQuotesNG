@@ -1,0 +1,39 @@
+<div class="container">
+    <header class="jumbotron mt-1">
+        <h1>The best wisdoms found in entertainment</h1>
+        <p>Some beautiful quotes</p>
+        <p class="loginrequired">
+            <a class="btn btn-large btn-primary" routerLink='/quotes/new' >Add new</a>
+        </p>
+    </header>
+</div>
+<div class="container">
+    <div class="d-flex header">
+        <span >
+            Series
+        </span>
+        <span class="episode">
+            Episode
+        </span>
+        <span class="quote">
+            Quote
+        </span>
+        <span>
+            Time
+        </span>
+    </div>
+    <div *ngFor="let quote of quotesList" class="d-flex data">
+        <span >
+            {{ quote.series }}
+        </span>
+        <span class="episode">
+            {{ quote.episode }}
+        </span>
+        <span class="quote">
+            {{ quote.quote }}
+        </span>
+        <span>
+            {{ quote.time }}
+        </span>
+    </div>
+</div>

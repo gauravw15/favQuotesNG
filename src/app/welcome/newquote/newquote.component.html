@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="container">
+        <h1 style="text-align: center;">Add a quote</h1>
+        <div class="form">
+        <form  (ngSubmit)="onSubmit(quoteForm)" #quoteForm="ngForm">
+            <section class="form-group">
+                <label> Series </label>
+                <input class="form-control" type="text" name="series" placeholder="Series" [(ngModel)]="series"> 
+            </section>
+            <section class="form-group">
+                <label> Episode </label>
+                <input class="form-control" type="text" name="episode" placeholder="S01 E01/ The Tales from Citadel" [(ngModel)]="episode">
+            </section>
+            <section class="form-group">
+                <label> The Quote </label>
+                <input class="form-control" type="text" name="quote" placeholder="Howw you doin" [(ngModel)]="quote">
+            </section>
+            <section class="form-group">
+                <label> Time Stamp </label>
+                <input class="form-control" type="text" name="time" placeholder="HH:MM:SS" [(ngModel)]="time">
+            </section>
+            <section class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+            </section>
+        </form>
+        <a href="/quotes">Go Back</a>
+    </div>        
+</div>
+</div>

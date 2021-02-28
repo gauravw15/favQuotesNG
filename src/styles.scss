@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('bootstrap.css');
+body{
+    overflow-x: hidden;
+}
+
+#form{
+    .form-input{
+        display: flex;
+        justify-content: space-between;
+        width: 360px;
+        margin: 5px 0;
+    }
+}
+

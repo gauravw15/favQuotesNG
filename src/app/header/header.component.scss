@@ -1,0 +1,19 @@
+.navbar.navbar-light.navbar-expand-lg.bg-light {
+  background: blanchedalmond !important;
+}
+
+@media(max-width: 992px){
+    .visible{
+        display: flex;
+        .ml-auto{
+            margin-left: 5px !important ;
+        }
+    }
+}
+
+button{
+    outline: 0;
+    &:focus{
+        outline: 0;
+    }
+}
